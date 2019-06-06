@@ -12,6 +12,7 @@
 package com.ego.dubbo.service;
 
 import com.ego.commons.pojo.EasyUIDataGrid;
+import com.ego.pojo.TbItem;
 
 /**
  * @author 付慧芳
@@ -25,4 +26,5 @@ import com.ego.commons.pojo.EasyUIDataGrid;
 
 public interface TbItemDubboService {
     EasyUIDataGrid show(int page,int rows);
+    int updItemStatus(TbItem tbItem);
 }

@@ -60,4 +60,18 @@ public class TbItemDubboServiceImpl implements TbItemDubboService {
 		return datagrid;
 	}
 
+	/** 
+	 * @param id
+	 * @param status
+	 * @return 
+	 */
+	
+	
+	
+	@Override
+	public int updItemStatus(TbItem tbItem) {
+		
+		return tbItemMapper.updateByPrimaryKeySelective(tbItem);
+	}
+
 }
