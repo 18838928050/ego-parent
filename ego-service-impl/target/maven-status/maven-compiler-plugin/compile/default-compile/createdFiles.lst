@@ -1,0 +1,13 @@
+com\ego\mapper\TbOrderMapper.class
+com\ego\mapper\TbItemDescMapper.class
+com\ego\mapper\TbItemParamMapper.class
+com\ego\mapper\TbItemCatMapper.class
+com\ego\mapper\TbOrderItemMapper.class
+com\ego\mapper\TbItemMapper.class
+com\ego\mapper\TbContentMapper.class
+com\ego\mapper\TbContentCategoryMapper.class
+com\ego\test\Test.class
+com\ego\dubbo\service\impl\TbItemDubboServiceImpl.class
+com\ego\mapper\TbOrderShippingMapper.class
+com\ego\mapper\TbUserMapper.class
+com\ego\mapper\TbItemParamItemMapper.class
