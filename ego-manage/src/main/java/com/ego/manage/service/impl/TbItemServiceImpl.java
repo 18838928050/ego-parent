@@ -58,7 +58,6 @@ public class TbItemServiceImpl implements TbItemService {
 		if(index==idsStr.length){
 			return 1;
 		}else{
-			
 			return 0;
 		}
 	}

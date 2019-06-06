@@ -1,4 +1,7 @@
+com\ego\manage\controller\TbItemCatController.class
 com\ego\manage\controller\PageController.class
 com\ego\manage\service\impl\TbItemServiceImpl.class
+com\ego\manage\service\impl\TbItemCatServiceImpl.class
 com\ego\manage\controller\TbItemController.class
 com\ego\manage\service\TbItemService.class
+com\ego\manage\service\TbItemCatService.class

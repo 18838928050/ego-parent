@@ -18,6 +18,10 @@
 	<!-- 注册功能,ref是服务真正指向的实现对象 -->
 	<dubbo:service interface="com.ego.dubbo.service.TbItemDubboService" ref="tbItemDubboServiceImpl"></dubbo:service>
 	<bean id="tbItemDubboServiceImpl" class="com.ego.dubbo.service.impl.TbItemDubboServiceImpl"></bean>
+	<!-- 商品类目服务 -->
+	<dubbo:service interface="com.ego.dubbo.service.TbItemCatDubboService" ref="tbItemCatDubboServiceImpl"></dubbo:service>
+	<bean id="tbItemCatDubboServiceImpl" class="com.ego.dubbo.service.impl.TbItemCatDubboServiceImpl"></bean>
+	
 	<import resource="../../applicationContext.xml"/> 
 </beans>
 
