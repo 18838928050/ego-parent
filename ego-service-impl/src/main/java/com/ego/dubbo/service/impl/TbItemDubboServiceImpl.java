@@ -74,4 +74,15 @@ public class TbItemDubboServiceImpl implements TbItemDubboService {
 		return tbItemMapper.updateByPrimaryKeySelective(tbItem);
 	}
 
+	/** 
+	 * @param tbItem
+	 * @return 
+	 */
+	
+	
+	@Override
+	public int insTbItem(TbItem tbItem) {
+		return tbItemMapper.insert(tbItem);
+	}
+
 }

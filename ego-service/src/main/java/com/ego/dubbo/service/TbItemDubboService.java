@@ -27,4 +27,5 @@ import com.ego.pojo.TbItem;
 public interface TbItemDubboService {
     EasyUIDataGrid show(int page,int rows);
     int updItemStatus(TbItem tbItem);
+    int insTbItem(TbItem tbItem);
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.ego.commons.pojo.EasyUIDataGrid;
 import com.ego.commons.pojo.EgoResult;
 import com.ego.manage.service.TbItemService;
+import com.ego.pojo.TbItem;
 
 @Controller
 public class TbItemController {
@@ -80,4 +81,25 @@ public class TbItemController {
 		}
 		return er;
 	}
+	
+	/**
+	 * 商品新增
+	 * @param item
+	 * @param desc
+	 * @return
+	 */
+	@RequestMapping("item/save")
+	@ResponseBody
+	public EgoResult insert(TbItem item,String	desc){
+		EgoResult er=new EgoResult();
+	int index=	tbItemServiceImpl.save(item, desc);
+	if (index==1) {
+		er.setStatus(200);
+		
+	}
+	return er;
+	}
+	
+	
 }
+
