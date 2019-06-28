@@ -21,9 +21,16 @@
 		<zkClient-version>0.10</zkClient-version>
 		<tomcat-version>2.2</tomcat-version>
 		<pagehelper-version>4.1.6</pagehelper-version>
+		<ftpclinet-version>3.3</ftpclinet-version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+		<!-- ftpclient -->
+			<dependency>
+			    <groupId>commons-net</groupId>
+			    <artifactId>commons-net</artifactId>
+			    <version>${ftpclinet-version}</version>
+			</dependency>
 			<!-- 依赖service -->
 			<dependency>
 				<groupId>com.ego</groupId>
