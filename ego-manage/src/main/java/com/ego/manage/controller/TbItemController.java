@@ -92,11 +92,18 @@ public class TbItemController {
 	@ResponseBody
 	public EgoResult insert(TbItem item,String	desc){
 		EgoResult er=new EgoResult();
-	int index=	tbItemServiceImpl.save(item, desc);
-	if (index==1) {
-		er.setStatus(200);
-		
+	int index;
+	try {
+		index = tbItemServiceImpl.save(item, desc);
+		if (index==1) {
+			er.setStatus(200);
+			
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+		er.setData(e.getMessage());
 	}
+	
 	return er;
 	}
 	

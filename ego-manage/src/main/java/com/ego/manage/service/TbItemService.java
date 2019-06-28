@@ -36,5 +36,5 @@ public interface TbItemService {
  /*
   * 商品新增
   */
- int save(TbItem item,String desc);
+ int save(TbItem item,String desc) throws Exception;
 }

@@ -74,12 +74,14 @@ public class TbItemServiceImpl implements TbItemService {
 	 * @param item
 	 * @param desc
 	 * @return 
+	 * @throws Exception 
 	 */
 	
 	
 	@Override
-	public int save(TbItem item, String desc) {
-		long id=IDUtils.genItemId();
+	public int save(TbItem item, String desc) throws Exception {
+		//不考虑事务回滚
+		/*long id=IDUtils.genItemId();
 		item.setId(id);
 		Date date=new Date();
 		item.setCreated(date);
@@ -98,8 +100,22 @@ public class TbItemServiceImpl implements TbItemService {
 		if (index==2) {
 			return 1;
 			
-		}
-		return 0;
+		}*/
+		//dubbo中考虑事务回滚的方法
+		long id=IDUtils.genItemId();
+		item.setId(id);
+		Date date=new Date();
+		item.setCreated(date);
+		item.setUpdated(date);
+		item.setStatus((byte)1);
+			TbItemDesc itemDesc=new TbItemDesc();
+			itemDesc.setItemDesc(desc);
+			itemDesc.setItemId(id);
+			itemDesc.setCreated(date);
+			itemDesc.setUpdated(date);
+			int index=0;
+				index=tbItemServiceImpl.insTbItemDesc(item, itemDesc);
+		return index;
 	}
 
 }

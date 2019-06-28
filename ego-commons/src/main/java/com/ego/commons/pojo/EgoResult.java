@@ -23,6 +23,21 @@ package com.ego.commons.pojo;
 
 public class EgoResult {
 	private int status;
+	private Object data;
+
+	/**
+	 * @return the data
+	 */
+	public Object getData() {
+		return data;
+	}
+
+	/**
+	 * @param data the data to set
+	 */
+	public void setData(Object data) {
+		this.data = data;
+	}
 
 	public int getStatus() {
 		return status;
