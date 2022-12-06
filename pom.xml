@@ -21,7 +21,7 @@
 		<zkClient-version>0.10</zkClient-version>
 		<tomcat-version>2.2</tomcat-version>
 		<pagehelper-version>4.1.6</pagehelper-version>
-		<ftpclinet-version>3.3</ftpclinet-version>
+		<ftpclinet-version>3.9.0</ftpclinet-version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
